@@ -3,6 +3,7 @@ $(window).load(function()
 	var nameH;
 	var pH;
 	var hiddenP;
+	var sparking = false;
 	
 	function getbodyW() //return current body width
 	{
@@ -35,12 +36,12 @@ $(window).load(function()
 		else
 		{
 			$(".top-pic").html("<img src = 'images/LynneCar.jpg'/>");			
-		}				
+		} 				
 	}	
 
 	function namePosition() //set position of LynneFo in relation to header image
 	{
-		return getPicH()*0.35;
+		return getPicH()*0.3;
 	}	
 
 	function socialPosition() //set position of social icons 10px above bottom of header image
@@ -59,12 +60,6 @@ $(window).load(function()
 	function purplePosition() //position purple div directly below header image
 	{
 		return getPicH()-nameH-pH-getSocialH()-1;
-	}
-
-	function grindPosition()
-	{
-		var aboutP = $(".about-div").offset();
-		return aboutP.top;
 	}
 
 	function doTheWave() //make social icons do the wave
@@ -86,28 +81,23 @@ $(window).load(function()
 		}		
 	}
 
-	function sparks() //play sparks gif when page is scrolled close to "about" image
+	function sparks() //display sparks gif for 2 seconds
 	{
-		var fin = true;
-		var grindP = grindPosition();
-		// console.log("from "+(grindP-250)+" - "+(grindP-230)+" hiddenP: "+hiddenP);
-		if(hiddenP>grindP-250 && hiddenP<grindP-230 && fin === true)
-		{			
-			fin = false;
-			$("#grind").toggleClass("hidden");
-			$("#grind2").toggleClass("hidden");
-			setTimeout(function()
+		if(sparking == false) 
+		{
+			$("#grind").addClass("hidden");
+			$("#grind2").removeClass("hidden");
+			sparking = true;
+
+			setTimeout(function () 
 			{
-				$("#grind").toggleClass("hidden");
-				$("#grind2").toggleClass("hidden");
-				setTimeout(function()
-				{
-					fin = true;
-				}, 100);				
-			},1000);
-		}
+				$("#grind").removeClass("hidden");
+				$("#grind2").addClass("hidden");
+				sparking = false;				
+			}, 2000)
+		}		
 	}
-	
+
 	$(document).scroll(function() 
 	{
 		hiddenP = $(document).scrollTop();
@@ -121,8 +111,9 @@ $(window).load(function()
 		{
 			$(".navbar").removeClass("scroll-nav");			
 		}
+
 		doTheWave();
-		sparks();		
+		sparks();			
 	});
 
 	$(".lynneFo").css("top", namePosition());

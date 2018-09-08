@@ -27,9 +27,10 @@
 					</div>
 					<div class="collapse navbar-collapse this-nav">
 						<ul class="nav navbar-nav navbar-right pull-right text-right">
-							<li><a href="#">Home</a></li>
-							<li id="projects-li"><a href="#">Projects</a></li>
-							<li><a href="#">Learn about Lynne</a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#">Home</a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#skills-id">Skills</a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#projects-id">Projects</a></li>
+							<li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#about-id">More About Me</a></li>
 						</ul>
 					</div>
 					
@@ -41,7 +42,9 @@
 				</div>
 
 				<div class="col-xs-12">
-					<p>this.LynneWest@gmail.com</p>
+					<p> <span class="tagline">Data Analytics Professional.</span><br>
+						<!-- <span class="degree">BS in Management Information Systems and Business Analytics.</span><br> -->
+						thisLynneWest@gmail.com </p>
 				</div>
 			</div>
 
@@ -49,11 +52,11 @@
 				<a href="https://github.com/LynneWest" target="blank">
 					<img id="1" src="images/gh.png">
 				</a>
-				<a href="https://twitter.com/thisLynneWest" target="blank">
-					<img id="2" src="images/twitterWhite.png">
-				</a>
 				<a href="https://www.linkedin.com/in/lynnewest" target="blank">
-					<img id="3" src="images/linkedinW.png">
+					<img id="2" src="images/linkedinW.png">
+				</a>
+				<a href="mailto:thislynnewest@gmail.com" target="blank">
+					<img id="3" src="images/atWhite.png">
 				</a>
 			</div>
 
@@ -61,47 +64,50 @@
 				<img src="images/LWBlack.png">
 			</div>
 		</header>
-		<div class="main">
-			<div class="purple">
-				<div class="container projects-container">
-					<div class="col-sm-4">
-						<h3>spelling game</h3>
-						<a href="WordGame/index.html" target="blank">
-							<img class="project-img" src="images/abc-tile.jpg">
-						</a>				
-						<p>This game, intuitive even to children, encourages spelling development and word awareness in young learners.</p>
-						<p>Responsive design, programmed with JavaScript and jQuery.</p>				
-					</div>
+			
+		<div class="purple">
+			<div class="skills-div" id="skills-id">			
+			</div><!--close skills div -->
 
-					<div class="col-sm-4">
-						<h3>title</h3>
-						<a href="#">
-							<img class="project-img" src="images/CSoon.jpg">
-						</a>				
-						<p>Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus justo pellentesque augue elementum posuere. Cras in dui orci. Suspendisse rutrum nec enim vitae sodales. Aenean suscipit, lacus vitae vehicula dictum.
-						</p>				
-					</div>	
-
-					<div class="col-sm-4">
-						<h3>title</h3>
-						<a href="#">
-							<img class="project-img" src="images/CSoon.jpg">
-						</a>				
-						<p>Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus justo pellentesque augue elementum posuere. Cras in dui orci. Suspendisse rutrum nec enim vitae sodales. Aenean suscipit, lacus vitae vehicula dictum.
-						</p>				
-					</div>		 
-				</div><!-- close projects-container -->
-
-				<div class = "about-div">
-					<img id="grind" src="images/Grinding.jpg">
-					<img id="grind2" class="hidden" src="images/sparking.gif">
-					<div class="container about-container">
-						<h1>About Lynne</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
+			<div class="container projects-container" id="projects-id">
+				<div class="col-sm-4">
+					<h3>spelling game</h3>
+					<a href="https://lynnewest.github.io/WordGame/" target="blank">
+						<img class="project-img" src="images/abc-tile.jpg">
+					</a>				
+					<p>This game, intuitive even to children, encourages spelling development and word awareness in young learners.</p>
+					<p>Responsive design, programmed with JavaScript and jQuery.</p>				
 				</div>
-			</div> <!-- close purple -->		
-		</div><!-- close main -->
+				<div class="col-sm-4">
+					<h3>title</h3>
+					<a href="https://lynnewest.github.io/CustomTimer/">
+						<img class="project-img" src="images/CSoon.jpg">
+					</a>				
+					<p>Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus justo pellentesque augue elementum posuere. Cras in dui orci. Suspendisse rutrum nec enim vitae sodales. Aenean suscipit, lacus vitae vehicula dictum.
+					</p>				
+				</div>	
+				<div class="col-sm-4">
+					<h3>title</h3>
+					<a href="#">
+						<img class="project-img" src="images/CSoon.jpg">
+					</a>				
+					<p>Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus justo pellentesque augue elementum posuere. Cras in dui orci. Suspendisse rutrum nec enim vitae sodales. Aenean suscipit, lacus vitae vehicula dictum.
+					</p>				
+				</div>		 
+			</div><!-- close projects-container -->
+
+			<div class="about-div" id="about-id">
+				<img id="grind" src="images/Grinding.jpg">
+				<img id="grind2" class="hidden" src="images/sparking.gif">
+				<div class="container about-container">
+					<h1>About Me</h1>
+					<p> I graduated summa cum laude with a Bachelor of Science in Management Information Systems in June 2018. I have a passion for statistics, SQL, data analytics, and data mining and I'm excited to apply these skills in a professional environment. I have some background in programming. I learned Java as part of my school curriculum and I've learned the basics of HTML, CSS, and JavaScript on my own. I welcome opportunities to integrate application development with my data analytics skill set. Aside from school, I've always had an interest in technical work. I've worked as an auto mechanic and I'm an ASE certified Master Technician and formerly licensed CA smog technician. On the weekends, you can find me at home with tools in hand, working on home renovation projects, building a sprinkler system that can be controlled from a mobile app, or fixing anything that happens to break around the house.</p>
+					<p class="about-email">thisLynneWest@gmail.com</p>
+				</div>
+			</div><!--close about-div-->
+
+		</div> <!-- close purple -->		
+		
 	
 
 	
